@@ -1,0 +1,91 @@
+1)mylist = range(4)
+seclist = mylist
+print(seclist)
+mylist.append(4)
+print (seclist)
+seclist = mylist[:]
+print (seclist)
+mylist.append(5)
+print (seclist)
+
+Output:
+
+AttributeError: 'range' object has no attribute 'append'
+
+2)def f(n):
+  for x in range(n):
+    yield x**3
+
+for x in f(6):
+  print (x)
+
+Output:
+
+0
+1
+8
+27
+64
+125
+
+
+3)word=input("Please enter the string:")
+def has_e(word):
+    for letter in word:
+        if letter=="e":
+            return True
+    return False
+print(has_e(word))
+
+
+4)counter = 1
+def dolots(count):
+  global counter
+  for i in (1, 2, 3):
+    counter = count + i
+
+print (dolots(4))
+print (counter)
+
+Output:
+
+None
+7
+
+
+5)fname=open("input.txt",'r')
+lines=0
+words=0
+characters=0
+for line in fname:
+    word=line.split()
+    lines=lines+1
+    words=words+len(word)
+    characters=characters+len(line)
+print("Number of characters=",characters)
+print("Number of words=",words)
+
+
+
+6) l1=[1,2,3,4]
+l2=[5,6,7,8]
+l3=[9,10,11,12]
+def find_len(l1):
+    length=len(l1)
+    l1.sort()
+    avg1=l1[length-1],l1[length-2]
+    print("The largest elements in first list:",l1[length-1],l1[length-2])
+find_len(l1)
+def find_len(l2):
+    length=len(l2)
+    l2.sort()
+    print("The largest elements in second list:",l1[length-1],l1[length-2])
+find_len(l2)
+def find_len(l3):
+    length=len(l3)
+    l3.sort()
+    print("The largest elements in third list:",l3[length-1],l3[length-2])
+find_len(l3)
+
+
+
