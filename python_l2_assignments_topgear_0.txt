@@ -1,0 +1,205 @@
+1)def squrt():
+    n=float(int(input("please provide a number to find square root:")))
+    s=n**0.5
+    print("the square root of the number is",s)
+squrt()
+def addn():
+        n1=float(int(input("please provide a number to find addition:")))
+        n2=float(int(input("please provide a number to find addition:")))
+        a=n1+n2
+        print("The addition is:",a)
+addn()
+def mul():
+    m1=float(int(input("please provide a number to find multiplication:")))
+    m2=float(int(input("please provide a number to find multiplication:")))
+    M=m1*m2
+    print("the multiplication is:",M)
+mul()
+def div():
+    d1=float(int(input("please provide a number to find division:")))
+    d2=float(int(input("please provide a number to find division:")))
+    D=d1/d2
+    print("the division of numbers is:",D)
+div()
+def sub():
+    s1=float(int(input("please provide a number to find subtraction:")))
+    s2=float(int(input("please provide a number to find subtraction:")))
+    S=s1-s2
+    print("The subtraction is:",S)
+sub()
+         
+    
+
+2)import re
+email='From abc.xyz@pqr.com Mon Dec 29 01:12:15 2016'
+E=re.findall('\S+@\S+',email)
+d=re.search("@[\w.]+",email)
+t=re.findall(r'\d{1,2}(?:(?:am|pm)|(?::\d{1,2})(?:am|pm)?)',email)
+print("The email ID is:",E)
+print('The domain is:',d)
+print('The time is:',t)
+
+Output:
+
+The email ID is: ['abc.xyz@pqr.com']
+The domain is: <re.Match object; span=(12, 20), match='@pqr.com'>
+The time is: ['01:12']
+
+
+3)class Mymath:
+        a=int(input("Enter the number to find square root:"))
+        S=a**0.5
+        if a < 0:
+            print("No square root for negative values")
+        else:
+            print("The square root is:",S)
+x=float(input("Enter the first number:"))
+y=float(input("Enter the second number:"))
+A=x+y
+s=x-y
+D=x/y
+m=x*y
+print("The addition of the numbers is:",A)
+print("The Subtraction of the numbers is:",s)
+print("The Division of the numbers is:",D)
+print("The Multiplication of the numbers is:",m)
+Mymath()
+
+Output:
+
+Enter the number to find square root:16
+The square root is: 4.0
+
+Enter the first number:2
+
+Enter the second number:3
+The addition of the numbers is: 5.0
+The Subtraction of the numbers is: -1.0
+The Division of the numbers is: 0.6666666666666666
+The Multiplication of the numbers is: 6.0
+
+
+
+4)from math import sqrt
+class sqt:
+     def __init__(self, value, name):
+      self.value = value
+      self.name = name
+
+     def __sqrt__(self):
+      return sqrt(self.value)
+     def __add__(self):
+         return add(self.value)
+     def __multiplication__(self):
+         return multiplication(self.value)
+     def __div__(self):
+         return div(self.value)
+sqt()
+
+
+
+5)class Add():
+    def __init__(self,a,b):
+        self.a=a
+        self.b=b
+    def add(self):
+        return self.a+self.b
+    def mul(self):
+        return self.a*self.b
+    def div(self):
+        return self.a/self.b
+    def sub(self):
+        return self.a-self.b
+class mathnew(Add):
+    return self.a+self.b
+
+
+
+
+6)class Matrix:
+
+    def __init__(self, a, b, c, d):
+        self.data = [a, b, c, d]
+
+    def __add__(self, other):
+        if isinstance(other, Matrix):
+            return Matrix(self.data[0] + other.data[0],
+                          self.data[1] + other.data[1],
+                          self.data[2] + other.data[2],
+                          self.data[3] + other.data[3])
+        else:
+            return NotImplemented
+
+
+
+7)s1='abc def ghi'
+s2='jkl mno pqr'
+set1=(s1.split(' '))
+set2=(s2.split(' '))
+print(set1==set2)
+
+
+
+
+
+8)class circle:
+  
+        r=float(input("Enter the radius of the circle:"))
+        A=3.14*r*r
+        C=2*3.14*r
+        print("The area of circle is:",A)
+        print("The circumference of circle is:",C)
+circle()
+        
+
+output:
+
+Enter the radius of the circle:04
+The area of circle is: 50.24
+The circumference of circle is: 25.12
+
+
+
+9)class circle():
+    def __init__(self,r):
+        self.radius=r
+    def area(self):
+        return self.radius**2*3.14
+    def circumference(self):
+        return self.radius*2*3.14
+new=circle(8)
+print(new.area())
+print(new.circumference())
+
+
+output:
+
+200.96
+50.24
+
+
+10)class First():
+    def m(self):
+        print("m() from class First")
+class Second(First):
+    def m1(self):
+        print("m() from class second")
+class Third(First):
+    def m2(self):
+        print("m() from class third")
+class Fourth(Second,Third):
+    def m3(self):
+        print("m() from class fourth")
+ch=Fourth()
+ch.m()
+ch.m1()
+ch.m2()
+ch.m3()
+
+Output:
+
+
+m() from class First
+m() from class second
+m() from class third
+m() from class fourth
